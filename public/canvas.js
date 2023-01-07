@@ -1,6 +1,3 @@
-// player.locX = Math.floor(Math.random() * settings.worldWidth);
-// player.locY = Math.floor(Math.random() * settings.worldHeight);
-
 function draw() {
   context.setTransform(1, 0, 0, 1, 0, 0); // reset transform to default to avoid cummulative effect
   // then clear screen
@@ -14,7 +11,7 @@ function draw() {
   players.forEach((p) => {
     context.beginPath();
     context.fillStyle = p.color;
-    context.arc(p.playerData.locX, p.playerData.locY, 10, 0, Math.PI * 2);
+    context.arc(p.locX, p.locY, p.radius, 0, Math.PI * 2);
     //   context.arc(200, 200, 10, 0, Math.PI * 2);
 
     context.fill();
